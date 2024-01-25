@@ -6,6 +6,11 @@ import { RootState, AppDispatch } from "./store/";
 import { increment, decrement } from "./store/counterSlice";
 import Button from "@mui/material/Button";
 import Layout from "./components/layout";
+import Products from "./components/Products";
+import Orders from "./components/Orders";
+import Customers from "./components/Customers";
+import Cards from "./components/Cards";
+
 function Home() {
   return <h2>Home</h2>;
 }
@@ -22,7 +27,7 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>Material-UI with Redux Toolkit and Router</h1>
+          {/* <h1>Material-UI with Redux Toolkit and Router</h1>
           <p>Counter: {counter}</p>
           <Button
             variant="contained"
@@ -37,8 +42,8 @@ function App() {
             onClick={() => dispatch(decrement())}
           >
             Decrement
-          </Button>
-          <nav>
+          </Button> */}
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -47,11 +52,11 @@ function App() {
                 <Link to="/about">About</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
         </header>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path="/about" element={<About />} /> */}
           <Route
             path="/"
             element={
@@ -60,6 +65,46 @@ function App() {
               </Layout>
             }
           />
+          <Route
+            path="/products"
+            element={
+              <Layout>
+                <Products />
+              </Layout>
+            }
+          />{" "}
+          <Route
+            path="/orders"
+            element={
+              <Layout>
+                <Orders />
+              </Layout>
+            }
+          />{" "}
+          <Route
+            path="/customers"
+            element={
+              <Layout>
+                <Customers />
+              </Layout>
+            }
+          />{" "}
+          <Route
+            path="/cards"
+            element={
+              <Layout>
+                <Cards />
+              </Layout>
+            }
+          />
+          {/* <Route
+            path="/about"
+            element={
+              <Layout>
+                <About />
+              </Layout>
+            }
+          /> */}
         </Routes>
       </div>
     </>

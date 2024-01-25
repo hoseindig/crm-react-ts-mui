@@ -1,0 +1,29 @@
+@import "./variables";
+
+.box {
+  height: calc(100vh - 160px);
+  background-color: #1976d2;
+  color: white;
+  padding: 20px;
+  ul {
+    li {
+      list-style-type: none; // This removes the default list item marker (bullet/number)
+      margin: 0; // This removes any default margin
+      padding: 0;
+      margin: 20px 0;
+      text-align: right;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Use the inherited color (same as its parent) */
+        /* Add additional styles as needed */
+      }
+    }
+  }
+}
