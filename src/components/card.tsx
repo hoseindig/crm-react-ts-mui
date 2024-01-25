@@ -64,7 +64,7 @@ export default function CardBox({ title, info, date }: cardType) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            {/* R */}
           </Avatar>
         }
         action={
@@ -102,7 +102,7 @@ export default function CardBox({ title, info, date }: cardType) {
           <ExpandMoreIcon />
         </ExpandMore> */}
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
@@ -132,7 +132,7 @@ export default function CardBox({ title, info, date }: cardType) {
             serve.
           </Typography>
         </CardContent>
-      </Collapse>
+      </Collapse> */}
     </Card>
   );
 }

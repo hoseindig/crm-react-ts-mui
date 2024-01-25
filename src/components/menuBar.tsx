@@ -1,23 +1,58 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from "../styles/MenuBar.module.scss";
 const MenuBar = () => {
   return (
     <div className={style.box}>
       <ul>
         <li>
-          <Link to="/">خانه</Link>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? style.isActive : "none"
+            }
+            to="/"
+          >
+            خانه
+          </NavLink>
         </li>
         <li>
-          <Link to="/products">محصولات</Link>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? style.isActive : "none"
+            }
+            to="/products"
+          >
+            محصولات
+          </NavLink>
         </li>
         <li>
-          <Link to="/orders">سفارشات</Link>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? style.isActive : "none"
+            }
+            to="/orders"
+          >
+            سفارشات
+          </NavLink>
         </li>
         <li>
-          <Link to="/customers">مشتریان</Link>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? style.isActive : "none"
+            }
+            to="/customers"
+          >
+            مشتریان
+          </NavLink>
         </li>
         <li>
-          <Link to="/cards">کارت ها</Link>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? style.isActive : "none"
+            }
+            to="/cards"
+          >
+            کارت ها
+          </NavLink>
         </li>
       </ul>
     </div>
