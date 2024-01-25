@@ -1,11 +1,11 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
 
 import AppBar from "./appBar";
 import MenuBar from "./menuBar";
+import styles from "../styles/layout.module.scss";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -20,7 +20,7 @@ type childrenType = {
 const Layout = ({ children }: childrenType) => {
   return (
     <>
-      <Box sx={{ flexGrow: 0 }}>
+      <Box sx={{ flexGrow: 0 }} className={styles.box}>
         <Grid container spacing={2}>
           <Grid xs={12}>
             <Item>
@@ -32,12 +32,9 @@ const Layout = ({ children }: childrenType) => {
               <MenuBar></MenuBar>
             </Item>
           </Grid>
-          <Grid xs={10}>
+          <Grid xs={10} className={styles.content + " ######"}>
             <Item>{children}</Item>
           </Grid>
-          {/* <Grid item xs={8}>
-            <Item>xs=8</Item>
-          </Grid> */}
         </Grid>
       </Box>
     </>
